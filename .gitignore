@@ -1,3 +1,3 @@
 venv/
 db.sqlite3
-controlpanel/__pycache__/
+controlpanel/relays/__pycache__/
