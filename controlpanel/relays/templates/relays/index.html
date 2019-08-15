@@ -1,4 +1,6 @@
 {% extends "relays/base.html" %}
 {% block content %}
-<h1> Relays index page </h1>
+     {% for relay in relays %}
+     <h1> {{ relay.relay_name }} </h1>
+     {% endfor %}
 {% endblock content %}
