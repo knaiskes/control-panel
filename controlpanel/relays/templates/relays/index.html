@@ -1,6 +1,7 @@
 {% extends "relays/base.html" %}
 {% block content %}
      {% for relay in relays %}
-     <h1> {{ relay.relay_name }} </h1>
+     <h1> {{ relay.id }} </h1>
+     <h1> {{ relay.name }} </h1>
      {% endfor %}
 {% endblock content %}
