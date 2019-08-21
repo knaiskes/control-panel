@@ -1,9 +1,24 @@
 {% extends 'relays/base.html' %}
 
 {% block content %}
-    <h2>New post</h2>
-    <form method="POST">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
-    </form>
+<h1>Relays</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Current State</th>
+        <th>Toggle</th>
+    </tr>
+    {% for relay in relays_list %}
+    <tr>
+        <td> {{relay.name}} </td>
+        <td> {{relay.state}} </td>
+        <td>
+            <form method="POST">{% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="save btn btn-default">Save</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
 {% endblock %}

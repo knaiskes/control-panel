@@ -12,10 +12,15 @@ def index(request):
 
 def updateState(request):
     form = UpdateStateForm()
+    relays_list = Relay.objects.all()
+    context = {
+            'form': form,
+            'relays_list': relays_list
+    }
 
     if request.method == 'POST':
         form = UpdateStateForm(request.POST or None)
         if form.is_valid():
             state = request.POST.get('state', '')
             print(state)
-    return render(request, 'relays/updateState.html', {'form': form})
+    return render(request, 'relays/updateState.html', context)
