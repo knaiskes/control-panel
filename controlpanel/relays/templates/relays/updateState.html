@@ -13,11 +13,6 @@
         <td> {{relay.name}} </td>
         <td> {{relay.state}} </td>
         <td>
-            <form method="POST">{% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="save btn btn-default">Save</button>
-            </form>
-        </td>
     </tr>
     {% endfor %}
 </table>
