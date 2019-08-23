@@ -3,14 +3,12 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 class Relay(models.Model):
     name = models.CharField(max_length=15, unique=True)
-    state = models.IntegerField(default=0,
-            validators = [MaxValueValidator(1), MinValueValidator(0)])
+    state = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
 
-    def update_state(self):
-        if self.state == 0:
-            self.state = 1
-        elif self.state == 1:
-            self.state = 0
+    def update_state(self, current_state):
+        # toggle
+        self.state = not current_state
+        self.save()
