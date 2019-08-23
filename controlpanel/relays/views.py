@@ -14,8 +14,6 @@ def index(request):
     return render(request, 'relays/index.html', context)
 
 def updateState(request, id):
-    #form = UpdateStateForm()
-    #if request.method == 'POST':
     instance = get_object_or_404(Relay, id=id)
     form = UpdateStateForm(request.POST or None, instance=instance)
     if form.is_valid():
