@@ -5,9 +5,15 @@
          {{relay.name}}
          {{relay.state}}
          <form action="/relays/updateState/{{relay.id}}" method="POST">{% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="save btn btn-default">Save</button>
-            </form>
+                 <label class="switch">
+                 {%if relay.state %}
+                 <input type="checkbox" checked onClick="this.form.submit();">
+                 {%else%}
+                 <input type="checkbox" onClick="this.form.submit();">
+                 {%endif%}
+                 <span class="slider round"></span>
+                 </label>
+        </form>
     {% endfor %}
 
 {% endblock content %}
