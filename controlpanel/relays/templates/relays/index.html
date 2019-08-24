@@ -1,19 +1,29 @@
 {% extends "relays/base.html" %}
 {% block content %}
-<h1>Relays</h1>
-    {% for relay in relays_list %}
-         {{relay.name}}
-         {{relay.state}}
-         <form action="/relays/updateState/{{relay.id}}" method="POST">{% csrf_token %}
-                 <label class="switch">
-                 {%if relay.state %}
-                 <input type="checkbox" checked onClick="this.form.submit();">
-                 {%else%}
-                 <input type="checkbox" onClick="this.form.submit();">
-                 {%endif%}
-                 <span class="slider round"></span>
-                 </label>
-        </form>
-    {% endfor %}
+<div id="relays-table">
+    <h1>Available Realys</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>State</th>
+        </tr>
+        {% for relay in relays_list %}
+        <tr>
+            <td>{{relay.name }}</td>
+            <td>
+                <form action="updateState/{{relay.id}}" method="POST">{% csrf_token %}
+                    <label class="switch">
+                        {%if relay.state %}
+                        <input type="checkbox" checked onClick="this.form.submit();">
+                        {%else%}
+                        <input type="checkbox" onClick="this.form.submit();">
+                        {%endif%}
+                        <span class="slider round"></span>
+                    </label>
+                </form>
+            </td>
+            {% endfor %}
+    </table>
+</div>
 
 {% endblock content %}
