@@ -56,3 +56,17 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+
+#relays-table table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#relays-table td, th {
+    border: 2px solid #dddddd;
+    padding: 10px;
+    text-align: left;
+    font-size: 18px;
+}
+
+#relays-table h1 { text-align: center; }
