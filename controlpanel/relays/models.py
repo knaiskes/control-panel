@@ -10,5 +10,4 @@ class Relay(models.Model):
 
     def update_state(self, current_state):
         # toggle
-        self.state = not current_state
-        self.save()
+        return not current_state

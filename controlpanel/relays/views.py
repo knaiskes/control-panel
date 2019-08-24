@@ -19,5 +19,6 @@ def updateState(request, id):
     current_state = instance.state
     if form.is_valid():
         instance.update_state(current_state)
+        form.save()
         return redirect('index')
     return render(request, 'relays/index.html')
