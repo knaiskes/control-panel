@@ -4,7 +4,7 @@
     {% for relay in relays_list %}
          {{relay.name}}
          {{relay.state}}
-         <form action="/relays/updateState/{{relay.id}}" method="POST">{% csrf_token %}
+         <form action="updateState/{{relay.id}}" method="POST">{% csrf_token %}
                  <label class="switch">
                  {%if relay.state %}
                  <input type="checkbox" checked onClick="this.form.submit();">
