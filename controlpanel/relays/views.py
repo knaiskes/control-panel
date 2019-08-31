@@ -18,8 +18,10 @@ def updateState(request, id):
     instance = get_object_or_404(Relay, id=id)
     form = UpdateStateForm(request.POST or None, instance=instance)
     current_state = instance.state
+    mqtt = Mqtt()
     if form.is_valid():
         instance.state = instance.update_state(current_state)
         form.save()
+        mqtt.send_relay_command(instance.mqtt_topic, instance.state)
         return redirect('index')
     return render(request, 'relays/index.html')
