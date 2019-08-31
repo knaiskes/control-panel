@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Relay
 from .forms import UpdateStateForm
 from django import forms
+from mqtt.models import Mqtt
 
 def index(request):
     relays_list = Relay.objects.all()
