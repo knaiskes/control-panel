@@ -3,9 +3,9 @@ from relays.models import Relay
 
 class RelayTestCase(TestCase):
     def setUp(self):
-        Relay.objects.create(name='relay1', state=False)
-        Relay.objects.create(name='relay2') # state: gets the deafult value
-        Relay.objects.create(name='relay3', state=True)
+        Relay.objects.create(name='relay1', state=False, mqtt_topic='relay1_topic')
+        Relay.objects.create(name='relay2', mqtt_topic='relay2_topic') # state: gets the deafult value
+        Relay.objects.create(name='relay3', state=True, mqtt_topic='relay3_topic')
 
     def test_relay_update_state(self):
         relay1 = Relay.objects.get(name='relay1')
