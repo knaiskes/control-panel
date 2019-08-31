@@ -1,5 +1,4 @@
 from django.db import models
-from django.core.validators import MaxValueValidator, MinValueValidator
 
 class Relay(models.Model):
     name = models.CharField(max_length=15, unique=True)
