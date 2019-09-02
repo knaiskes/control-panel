@@ -57,19 +57,19 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-#relays-table table {
+table {
     border-collapse: collapse;
     width: 100%;
 }
 
-#relays-table td, th {
+table td, th {
     border: 2px solid #dddddd;
     padding: 10px;
     text-align: left;
     font-size: 18px;
 }
 
-#relays-table h1 { text-align: center; }
+h1 { text-align: center; }
 
 .navbar {
     overflow: hidden;
