@@ -19,4 +19,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('relays/', include('relays.urls')),
+    path('dht22/', include('dht22.urls')),
 ]
