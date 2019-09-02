@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'relays.apps.RelaysConfig',
     'mqtt.apps.MqttConfig',
+    'dht22.apps.Dht22Config',
 ]
 
 MIDDLEWARE = [
