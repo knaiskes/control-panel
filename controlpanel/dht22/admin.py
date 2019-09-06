@@ -1,13 +1,13 @@
 from django.contrib import admin
-from .models import Dht22, Data
+from .models import Dht22, Record
 
 admin.site.register(Dht22)
-admin.site.register(Data)
+admin.site.register(Record)
 
-class DataInline(admin.TabularInline):
-    model = Data
+class RecordInline(admin.TabularInline):
+    model = Record
 
 class Dht22Admin(admin.ModelAdmin):
     inlines = [
-        DataInline,
+        RecordInline,
     ]
