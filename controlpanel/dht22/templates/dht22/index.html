@@ -1,23 +1,15 @@
 {% extends "relays/base.html" %}
 {% block content %}
 <h1>Available DHT22 Sensors</h1>
-  <table>
+<table>
     <tr>
-      <th>Name</th>
-      <th>Temperature</th>
-      <th>Humidity</th>
-      <th>Date</th>
-      <th>Time</th>
+        <th>Name</th>
     </tr>
     {% for dht22 in dht22_list %}
     <tr>
-      <td>{{ dht22.name        }}</td>
-      <td>{{ dht22.temperature }}</td>
-      <td>{{ dht22.humidity    }}</td>
-      <td>{{ dht22.date.date   }}</td>
-      <td>{{ dht22.date.time   }}</td>
-      {% endfor %}
-  </table>
+        <td><a href="{% url 'records' name=dht22.name %}">{{ dht22.name }}</a></td>
+        {% endfor %}
+</table>
 </div>
 
 {% endblock content %}
