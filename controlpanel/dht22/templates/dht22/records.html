@@ -1,0 +1,22 @@
+{% extends "relays/base.html" %}
+{% block content %}
+<h1> {{ name}} records</h1>
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Temperature</th>
+        <th>Humidity</th>
+    </tr>
+    {% for record in records %}
+    <tr>
+        <td>{{ record.date.date   }}</td>
+        <td>{{ record.date.time   }}</td>
+        <td>{{ record.temperature }}</td>
+        <td>{{ record.humidity    }}</td>
+
+        {% endfor %}
+</table>
+</div>
+
+{% endblock content %}
