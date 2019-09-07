@@ -23,5 +23,5 @@ def updateState(request, id):
         instance.state = instance.update_state(current_state)
         form.save()
         mqtt.send_relay_command(instance.mqtt_topic, instance.state)
-        return redirect('index')
+        return redirect('relays:index')
     return render(request, 'relays/index.html')
