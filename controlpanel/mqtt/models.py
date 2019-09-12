@@ -22,23 +22,6 @@ class Mqtt(models.Model):
             # TODO return error message and render it to dashboard
             pass
 
-
-    #def send_relay_command(self, topic, state):
-    #    command = 'OFF'
-
-    #    if state:
-    #        command = 'ON'
-
-    #    try:
-    #        relay_client = paho.Client()
-    #        relay_client.on_publish = self.on_publish
-    #        relay_client.connect(self.broker, self.port)
-    #        ret = relay_client.publish(topic, command)
-
-    #    except ConnectionRefusedError:
-    #        # TODO return error message and render it to dashboard
-    #        pass
-
 class MqttRelay(Mqtt):
     def send(self, state):
         if state:
