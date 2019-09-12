@@ -17,7 +17,7 @@ class Mqtt(models.Model):
             self.client_name = paho.Client()
             self.client_name.on_publish = self.on_publish
             self.client_name.connect(self.broker, self.port)
-            ret = client_name.publish(self.topic, command)
+            ret = self.client_name.publish(self.topic, command)
         except ConnectionRefusedError:
             # TODO return error message and render it to dashboard
             pass
