@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'relays.apps.RelaysConfig',
     'mqtt.apps.MqttConfig',
     'dht22.apps.Dht22Config',
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Login urls
+LOGIN_URL = '/accounts'
+LOGIN_REDIRECT_URL = '/relays'
