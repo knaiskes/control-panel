@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
+from django.contrib.auth.forms import AuthenticationForm
 
 def login(request):
     if request.method == 'POST':
+        form = AuthenticationForm(request.POST)
         username = request.POST['username']
         password = request.POST['password']
 
@@ -12,8 +14,8 @@ def login(request):
             auth.login(request, user)
             return redirect('relays')
         else:
-            #TODO: add error messages
             return redirect('login')
 
     else:
-        return render(request, 'login.html')
+        form = AuthenticationForm()
+        return render(request, 'login.html', {'form': form})
