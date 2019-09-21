@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Dht22, Record
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def index(request):
     dht22_list = Dht22.objects.all()
 
@@ -11,6 +13,7 @@ def index(request):
 
     return render(request, 'dht22/index.html', context)
 
+@login_required
 def records(request, name):
     records = Record.objects.filter(name=name)
     context = {
