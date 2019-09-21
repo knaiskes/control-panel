@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'mqtt.apps.MqttConfig',
     'dht22.apps.Dht22Config',
     'accounts.apps.AccountsConfig',
+    'pages.apps.PagesConfig',
 ]
 
 MIDDLEWARE = [
