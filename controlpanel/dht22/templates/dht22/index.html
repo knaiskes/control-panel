@@ -1,4 +1,4 @@
-{% extends "relays/base.html" %}
+{% extends "base.html" %}
 {% block content %}
 <h1>Available DHT22 Sensors</h1>
 <table>
@@ -7,7 +7,7 @@
     </tr>
     {% for dht22 in dht22_list %}
     <tr>
-        <td><a href="{% url 'records' name=dht22.name %}">{{ dht22.name }}</a></td>
+        <td><a href="{% url 'dht22:records' name=dht22.name %}">{{ dht22.name }}</a></td>
         {% endfor %}
 </table>
 </div>
