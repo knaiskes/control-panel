@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <div class="navbar">
+            <a href="#/"> Home </a>
+            <a href="#"> List </a>
+        </div>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        {% if title %}
+        <title> {{ title }} </title>
+        {% else %}
+        <title>Unknown</title>
+        {% endif %}
+    </head>
+    <body>
+        {% block content %}{% endblock %}
+    </body>
+</html>
