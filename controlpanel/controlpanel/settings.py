@@ -129,4 +129,4 @@ STATICFILES_DIRS = [
 
 # Login urls
 LOGIN_URL = '/accounts/login'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/relays/' # Will change it to dashboard later
