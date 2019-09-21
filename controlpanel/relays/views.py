@@ -3,7 +3,9 @@ from .models import Relay
 from .forms import UpdateStateForm
 from django import forms
 from mqtt.models import MqttRelay
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def index(request):
     relays_list = Relay.objects.all()
     form = UpdateStateForm()
@@ -14,6 +16,7 @@ def index(request):
     }
     return render(request, 'relays/index.html', context)
 
+@login_required
 def updateState(request, id):
     instance = get_object_or_404(Relay, id=id)
     form = UpdateStateForm(request.POST or None, instance=instance)

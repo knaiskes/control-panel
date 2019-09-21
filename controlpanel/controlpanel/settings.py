@@ -124,5 +124,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Login urls
-LOGIN_URL = '/accounts'
-LOGIN_REDIRECT_URL = '/relays'
+LOGIN_URL = '/accounts/login'
+LOGIN_REDIRECT_URL = '/'
