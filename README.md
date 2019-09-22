@@ -55,6 +55,12 @@ $ sudo apt-get install mosquitto mosquitto-clients
 $ sudo pacman -S mosquitto
 ```
 
+Start mosquitto service
+
+```
+$ sudo systemctl start mosquitto
+```
+
 ## Authentication
 
 ### Add user and password
