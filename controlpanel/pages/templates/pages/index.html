@@ -1,6 +1,9 @@
 {% extends "pages/base.html" %}
 {% block content %}
-<h1>Home</h1>
+
+<h1>Welcome to control-panel</h1>
+
+<h2><a href="{% url 'accounts:login' %}">Login</a> to your account
+    and start controlling your IoT devices!</h2>
 
 {% endblock content %}
-
