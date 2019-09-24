@@ -158,3 +158,33 @@ footer a {
     color: #E6E6FA;
     font-size: 50px;
 }
+
+.loginForm {
+    margin: 75px auto auto;
+    border: 3px solid #F7F7F7;
+    font-size: 20px;
+}
+
+.loginForm input[type=text], input[type=password] {
+    background-color: #FBFBFB;
+    width: 300px;
+    border: 1px solid #006666;
+    height: 50px;
+    display: block;
+    font-size: 18px;
+    width: 50%;
+}
+
+.loginForm button {
+    background-color: #007777;
+    color: white;
+    padding: 14px 20px;
+    margin: 20px 0 0;
+    border: none;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    width: 50%;
+}
+
+.loginForm h3 {color: #d11141;}
