@@ -188,3 +188,11 @@ footer a {
 }
 
 .loginForm h3 {color: #d11141;}
+
+.dashboard-box {
+    text-align: center;
+    width: 20%;
+}
+
+.dashboard-box a { text-decoration: none; }
+

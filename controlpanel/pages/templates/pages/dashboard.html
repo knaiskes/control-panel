@@ -3,7 +3,13 @@
 
 <h1>Dashboard</h1>
 
-<a href="{% url 'relays:index' %}">Relays</a>
-<a href="{% url 'dht22:index' %}">Dht22 sensors</a>
+<div class="dashboard-box">
+  <a href="{% url 'relays:index' %}">Relays</a>
+  <p>Two state devices (ON/OFF)</p>
+</div>
+<div class="dashboard-box">
+  <a href="{% url 'dht22:index' %}">Dht22</a>
+  <p>Temperature & humidity records </p>
+</div>
 
 {% endblock content %}
