@@ -7,5 +7,5 @@ def home_view(request):
 
 @login_required
 def dashboard_view(request):
-    context = { 'title': 'dashboard' }
+    context = { 'title': 'Dashboard' }
     return render(request, 'pages/dashboard.html', context)
