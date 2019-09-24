@@ -1,14 +1,28 @@
+{% extends "base.html" %}
 {% block content %}
 
-<form action="" method="POST">
+<div class="loginForm">
+  <center>
+  <form action="" method="POST">
     {% csrf_token %}
-    {{ form.username }}
-    {{ form.password }}
+    <p>
+    <label for="username">Username</label>
+    <input type="text" placeholder="Username" name="username" required value="{{request.form.username}}">
+    </p>
+    <p>
+    <label for="password">Password</label>
+    <input type="password" placeholder="Password" name="password" required value="{{request.form.password}}">
+    </p>
+    <p>
     <button type="submit">Login</button>
-</form>
+    </p>
+  </form>
 
-{% if form.errors %}
-  <h1>Credentials do not match</h1>
-{% endif %}
+  {% if form.errors %}
+  <h3>Credentials do not match</h3>
+  {% endif %}
+  </center>
+
+</div>
 
 {% endblock content %}
