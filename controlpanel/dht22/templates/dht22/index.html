@@ -3,11 +3,11 @@
 <h1>Available DHT22 Sensors</h1>
 <table>
     <tr>
-        <th>Name</th>
+        <th>List</th>
     </tr>
     {% for dht22 in dht22_list %}
     <tr>
-        <td><a href="{% url 'dht22:records' name=dht22.name %}">{{ dht22.name }}</a></td>
+        <td><a href="{% url 'dht22:records' name=dht22.name %}">View records for {{ dht22.name }}</a></td>
         {% endfor %}
 </table>
 </div>
