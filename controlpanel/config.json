@@ -1,0 +1,6 @@
+{
+    "mqtt": {
+        "username": "devUser",
+        "password": "devPassword"
+    }
+}
