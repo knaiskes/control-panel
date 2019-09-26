@@ -3,7 +3,7 @@ import paho.mqtt.client as paho
 from json import load
 
 try:
-    with open('../config.json') as json_file:
+    with open('config.json') as json_file:
         data = load(json_file)
 
     username = data['mqtt']['username']
