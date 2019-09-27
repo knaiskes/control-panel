@@ -3,8 +3,8 @@
 <html>
     <head>
         <div class="navbar">
-            <a href="#/"> Home </a>
-            <a href="#"> List </a>
+          <a href="{% url 'relays:index' %}"> Relays </a>
+          <a href="{% url 'dht22:index' %}"> Dht22 </a>
         </div>
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         {% if title %}
