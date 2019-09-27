@@ -192,7 +192,8 @@ footer a {
 .dashboard-box {
     text-align: center;
     width: 20%;
+    margin: 0 auto;
 }
 
 .dashboard-box a { text-decoration: none; }
-
+.dashboard-box p { font-size: 20px; background-color: #B4B4B4; }
