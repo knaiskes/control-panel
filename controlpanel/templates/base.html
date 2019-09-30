@@ -4,6 +4,7 @@
     <head>
       {% if user.is_authenticated %}
         <div class="navbar">
+          <a href="{% url 'dashboard' %}"> Dashboard </a>
           <a href="{% url 'relays:index' %}"> Relays </a>
           <a href="{% url 'dht22:index' %}"> Dht22 </a>
         </div>
