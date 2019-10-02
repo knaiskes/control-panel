@@ -131,3 +131,4 @@ STATICFILES_DIRS = [
 # Login urls
 LOGIN_URL = '/accounts/login'
 LOGIN_REDIRECT_URL = '/dashboard'
+LOGOUT_REDIRECT_URL = "/"
