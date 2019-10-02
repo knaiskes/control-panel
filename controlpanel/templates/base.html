@@ -7,6 +7,7 @@
           <a href="{% url 'dashboard' %}"> Dashboard </a>
           <a href="{% url 'relays:index' %}"> Relays </a>
           <a href="{% url 'dht22:index' %}"> Dht22 </a>
+          <a style="float:right" href="{% url 'accounts:logout' %}"> Logout </a>
         </div>
         {% endif %}
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
