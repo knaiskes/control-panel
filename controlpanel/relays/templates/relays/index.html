@@ -8,7 +8,7 @@
     </tr>
     {% for relay in relays_list %}
     <tr>
-        <td>{{relay.name }}</td>
+        <td>{{relay.identifier }}</td>
         <td>
             <form action="updateState/{{relay.id}}" method="POST">{% csrf_token %}
                 <label class="switch">
