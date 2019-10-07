@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./controlpanel:/controlpanel
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: devUSerDB
+      POSTGRES_PASSWORD: devPassDB
+    ports:
+      - '5432:5432'
