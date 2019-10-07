@@ -7,7 +7,7 @@
     </tr>
     {% for dht22 in dht22_list %}
     <tr>
-        <td><a href="{% url 'dht22:records' name=dht22.name %}">View records for {{ dht22.name }}</a></td>
+        <td><a href="{% url 'dht22:records' name=dht22.identifier %}">View records for {{ dht22.identifier }}</a></td>
         {% endfor %}
 </table>
 </div>
