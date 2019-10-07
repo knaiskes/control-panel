@@ -2,6 +2,7 @@ from django.db import models
 
 class Relay(models.Model):
     name = models.CharField(max_length=15, unique=True)
+    identifier = models.CharField(max_length=15, unique=True)
     state = models.BooleanField(default=False)
     mqtt_topic = models.CharField(max_length=15, unique=True)
 
