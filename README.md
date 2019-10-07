@@ -29,13 +29,13 @@ $ python controlpanel/manage.py migrate
 ### Add super user (admin)
 
 ```
-python controlpanel/manage.py createsuperuser
+$ python controlpanel/manage.py createsuperuser
 ```
 
 ### Start project
 
 ```
-python controlpanel/manage.py runserver
+$ python controlpanel/manage.py runserver
 ```
 
 ## Mosquitto
