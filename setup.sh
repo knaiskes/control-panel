@@ -21,6 +21,16 @@ function createVirtualEnviroment {
     fi
 }
 
+function migrations {
+    echo "Making migrations";
+    declare -a migrationsArr=("relays" "dht22")
+    echo "${migrationsArr[@]}"
+    python controlpanel/manage.py migrate
+    python controlpanel/manage.py makemigrations "${migrationsArr[@]}"
+}
+
 # Check if venv already exists
 
+
 createVirtualEnviroment
+migrations
