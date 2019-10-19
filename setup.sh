@@ -29,8 +29,14 @@ function migrations {
     python controlpanel/manage.py makemigrations "${migrationsArr[@]}"
 }
 
+function addAdmin {
+    echo "Add admin user";
+    python controlpanel/manage.py createsuperuser
+}
+
 # Check if venv already exists
 
 
 createVirtualEnviroment
 migrations
+addAdmin
