@@ -17,7 +17,7 @@ function createVirtualEnviroment {
         source venv/bin/activate
         pip install -r requirements.txt
     else
-        echo "Python is not install on your system";
+        echo "Python is not installed on your system";
     fi
 }
 
@@ -34,9 +34,28 @@ function addAdmin {
     python controlpanel/manage.py createsuperuser
 }
 
-# Check if venv already exists
+function configureMosquitto {
+    confFile="/etc/mosquitto/mosquitto.conf"
+    if dependencyExists "mosquitto"; then
+        echo "Starting mosquitto service";
+        sudo systemctl start mosquitto
+        echo "Enter mosquitto username ";
+        read username
+        sudo mosquitto_passwd -c /etc/mosquitto/passwd $username
+        echo "Configuring $confFile";
+        echo "allow_anonymous false" | sudo tee -a  $confFile > /dev/null
+        echo "password_file /etc/mosquitto/passwd" | sudo tee -a $confFile > /dev/null
+        echo "Restarting mosquitto service"
+        sudo systemctl restart mosquitto
+    else
+        echo "Mosquitto is not installed on your system";
+    fi
+}
+
+# TODO: Check if venv already exists
 
 
-createVirtualEnviroment
-migrations
-addAdmin
+#createVirtualEnviroment
+#migrations
+#addAdmin
+configureMosquitto
