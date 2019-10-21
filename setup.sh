@@ -52,10 +52,7 @@ function configureMosquitto {
     fi
 }
 
-# TODO: Check if venv already exists
-
-
-#createVirtualEnviroment
-#migrations
-#addAdmin
+createVirtualEnviroment
+migrations
+addAdmin
 configureMosquitto
