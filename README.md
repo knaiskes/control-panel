@@ -83,3 +83,24 @@ restart mosquitto service
 ```
 $ sudo systemctl restart mosquitto
 ```
+
+### Configure static IP address
+
+Open dhcpcd.conf
+
+```
+$ sudo vim /etc/dhcpcd.conf
+```
+
+And append to the end of the file the following:
+
+```
+interface eth0
+
+static ip_address=192.168.1.10/24
+static routers=192.168.1.254
+static domain_name_servers=192.168.1.1
+```
+Lastly reboot in order to be assigned the static IP address
+
+**Note:** Change the network settings accordingly to your network.
