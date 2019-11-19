@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'dht22.apps.Dht22Config',
     'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
+    'buzzer.apps.BuzzerConfig',
 ]
 
 MIDDLEWARE = [
