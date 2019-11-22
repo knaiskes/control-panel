@@ -2,5 +2,8 @@
     "mqtt": {
         "username": "devUser",
         "password": "devPassword"
+    },
+    "server": {
+	"staticIP" : "192.168.1.5"
     }
 }
