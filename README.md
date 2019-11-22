@@ -34,8 +34,18 @@ $ python controlpanel/manage.py createsuperuser
 
 ### Start project
 
+#### Only in localhost
+
 ```
 $ python controlpanel/manage.py runserver
+```
+
+#### In whole local network
+
+*Note* Make sure to add your static ip in [config.json](https://github.com/KNaiskes/control-panel/blob/master/config.json)
+
+```
+$ python controlpanel/manage.py runserver 0.0.0.0:8000
 ```
 
 ## Mosquitto

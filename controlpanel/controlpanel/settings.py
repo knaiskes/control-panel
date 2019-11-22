@@ -11,6 +11,16 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+from json import load
+
+try:
+    with open('config.json') as json_file:
+        data = load(json_file)
+
+        staticIP = data['server']['staticIP']
+
+except FileNotFoundError:
+    print('settings.py: could not open config.json')
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +35,7 @@ SECRET_KEY = '(p7)g!5jdijcz5o#2dkq48dt)4(uq^$hqbb*zjnmmd#tv3k2l+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', staticIP]
 
 
 # Application definition
