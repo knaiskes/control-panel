@@ -138,11 +138,19 @@ $ exit
 $ sudo systemctl start postgresql
 ```
 
-### Create a database
+### Create/Configure database and add username and password
 
 ```
 $ sudo su - postgres
-$ createdb databaseName
+$ psql
+$ CREATE DATABASE dbName;
+$ CREATE USER myUsername WITH PASSWORD 'password';
+$ ALTER ROLE myUsername SET client_encoding TO 'utf8';
+$ ALTER ROLE myUsername SET default_transaction_isolation TO 'read committed';
+$ ALTER ROLE myUsername SET timezone TO 'UTC';
+$ GRANT ALL PRIVILEGES ON DATABASE dbName TO myUsername;
+$ \q
+$ exit
 ```
 
 [More information - ArchLinux Wiki](https://wiki.archlinux.org/index.php/PostgreSQL)
