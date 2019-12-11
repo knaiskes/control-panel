@@ -135,7 +135,7 @@ $ exit
 ### Start postgres
 
 ```
-$ sudo systemctl start postgres
+$ sudo systemctl start postgresql
 ```
 
 ### Create a database
