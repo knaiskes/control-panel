@@ -114,3 +114,33 @@ static domain_name_servers=192.168.1.1
 Lastly reboot in order to be assigned the static IP address
 
 **Note:** Change the network settings accordingly to your network.
+
+# PostgreSQL
+
+### Arch Linux installation
+
+```
+$ sudo pacman -Sy
+$ sudo pacman -S postgresql
+```
+
+### Initial configuration
+
+```
+$ sudo su - postgres
+[postgres]$ alize data directory
+$ exit
+```
+
+### Start postgres
+
+```
+$ sudo systemctl start postgres
+```
+
+### Create a database
+
+```
+$ sudo su - postgres
+$ createdb databaseName
+```
