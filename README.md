@@ -144,3 +144,5 @@ $ sudo systemctl start postgres
 $ sudo su - postgres
 $ createdb databaseName
 ```
+
+[More information - ArchLinux Wiki](https://wiki.archlinux.org/index.php/PostgreSQL)
