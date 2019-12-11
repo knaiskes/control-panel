@@ -19,6 +19,11 @@ try:
 
         staticIP = data['server']['staticIP']
 
+        dbUser =     data['database']['user']
+        dbPassword = data['database']['password']
+        dbName =     data['database']['dbName']
+        dbHost =     data['database']['host']
+
 except FileNotFoundError:
     print('settings.py: could not open config.json')
 
@@ -95,10 +100,10 @@ DATABASES = {
 
         # postgres config
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dbname',
-        'USER': 'username',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
+        'NAME': dbName,
+        'USER': dbUser,
+        'PASSWORD': dbPassword,
+        'HOST': dbHost,
         'PORT': '',
     }
 }
