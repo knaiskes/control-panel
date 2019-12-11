@@ -128,7 +128,7 @@ $ sudo pacman -S postgresql
 
 ```
 $ sudo su - postgres
-[postgres]$ alize data directory
+[postgres]$ initdb -D /var/lib/postgres/data
 $ exit
 ```
 
