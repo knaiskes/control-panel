@@ -4,6 +4,13 @@
         "password": "devPassword"
     },
     "server": {
-	"staticIP" : "192.168.1.5"
+        "staticIP" : "192.168.1.5"
+    },
+    "database": {
+        "user":     "username",
+        "password": "password",
+        "dbName":    "dbname",
+        "host":      "localhost",
+        "port":      "5432"
     }
 }

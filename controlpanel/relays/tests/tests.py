@@ -1,3 +1,4 @@
+"""
 from django.test import TestCase
 from relays.models import Relay
 
@@ -16,3 +17,4 @@ class RelayTestCase(TestCase):
         self.assertEqual(relay2.update_state(relay2.state), True)
         self.assertEqual(relay3.update_state(relay3.state), False)
 
+"""
