@@ -23,6 +23,7 @@ try:
         dbPassword = data['database']['password']
         dbName =     data['database']['dbName']
         dbHost =     data['database']['host']
+        dbPort =     data['database']['port']
 
 except FileNotFoundError:
     print('settings.py: could not open config.json')
@@ -104,7 +105,7 @@ DATABASES = {
         'USER': dbUser,
         'PASSWORD': dbPassword,
         'HOST': dbHost,
-        'PORT': '',
+        'PORT': dbPort,
     }
 }
 

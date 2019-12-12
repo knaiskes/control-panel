@@ -10,6 +10,7 @@
         "user":     "username",
         "password": "password",
         "dbName":    "dbname",
-        "host":      "localhost"
+        "host":      "localhost",
+        "port":      "5432"
     }
 }
