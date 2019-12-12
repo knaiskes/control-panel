@@ -17,6 +17,9 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: ${{ matrix.python-version }}
+    - name: Install postgres
+      run: |
+          apt-get install -y postgresql
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
