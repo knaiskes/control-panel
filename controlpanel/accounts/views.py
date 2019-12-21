@@ -10,12 +10,6 @@ def login(request):
 
         user = auth.authenticate(username=username, password=password)
 
-        if user is not None:
-            auth.login(request, user)
-            return redirect('relays')
-        else:
-            return redirect('login')
-
     else:
         form = AuthenticationForm()
         return render(request, 'login.html', {'form': form})
